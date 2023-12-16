@@ -39,7 +39,7 @@ const SignUpForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         onBlur={validateEmail}
-        style={{ border: isPasswordValid ? '1px solid green' : '1px solid red' }}
+        style={{ border: isEmailValid ? '1px solid green' : '1px solid red' }}
       />
       {!isEmailValid && <div style={{ color: 'red' }}>Invalid email format</div>}
 
@@ -49,7 +49,7 @@ const SignUpForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         onBlur={validatePassword}
-        style={{ border: isEmailValid ? '1px solid green' : '1px solid red' }}
+        style={{ border: isPasswordValid ? '1px solid green' : '1px solid red' }}
       />
       {!isPasswordValid && 
         <div style={{ color: 'red' }}>Password must be at least 8 characters long</div>
